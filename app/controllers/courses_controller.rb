@@ -15,6 +15,21 @@ class CoursesController < ApplicationController
     end
   end
 
+  def show
+    @course = Course.find(params[:id])
+  end
+
+  def edit
+    @course = Course.find(params[:id])
+  end
+
+  def update
+    @course = Course.find(params[:id])
+    @course.update_attributes!(course_params)
+
+    redirect_to courses_path
+  end
+
   private
   def course_params
     params.require(:course).permit(:name, :level)

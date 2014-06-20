@@ -8,14 +8,7 @@
     <%= f.text_field :level %>
   </p>
   <p>
-    <%= f.submit 'Add course' %>
+    <%= f.submit 'Update course' %>
   </p>
 <% end %>
 
-<%= @courses.each do |course| %>
-<ul>
-  <li>
-    <%= link_to "#{course.name}", course_path(course) %>, <%= course.level %>
-  </li>
-</ul>
-<% end %>
