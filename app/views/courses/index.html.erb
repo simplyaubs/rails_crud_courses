@@ -1,0 +1,21 @@
+<%= form_for @course do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :level %>
+    <%= f.text_field :level %>
+  </p>
+  <p>
+    <%= f.submit 'Add course' %>
+  </p>
+<% end %>
+
+<%= @courses.each do |course| %>
+<ul>
+  <li>
+    <%= course.name %>, <%= course.level %>
+  </li>
+</ul>
+<% end %>
